@@ -1,0 +1,302 @@
+{
+  "movies": [
+    {
+      "id": 1,
+      "title": "High Life",
+      "description": "High Life description",
+      "imageUrl": "../assets/Images/1.png",
+      "isPopular": false,
+      "genreId": 3,
+      "imdbscoreId": 3,
+      "publishId": 3,
+      "languageId": 3,
+      "qualityId": 3
+    },
+    {
+      "id": 2,
+      "title": "billboard",
+      "description": "billboard description",
+      "imageUrl": "../assets/Images/2.png",
+      "isPopular": false,
+      "genreId": 3,
+      "imdbscoreId": 3,
+      "publishId": 3,
+      "languageId": 3,
+      "qualityId": 3
+    },
+    {
+      "id": 3,
+      "title": "Storm boy",
+      "description": "Storm boy description",
+      "imageUrl": "../assets/Images/3.png",
+      "isPopular": false,
+      "genreId": 3,
+      "imdbscoreId": 3,
+      "publishId": 3,
+      "languageId": 3,
+      "qualityId": 3
+    },
+    {
+      "id": 4,
+      "title": "I Kill Giants",
+      "description": "I Kill Giants description",
+      "imageUrl": "../assets/Images/4.jpg",
+      "isPopular": false,
+      "genreId": 3,
+      "imdbscoreId": 3,
+      "publishId": 3,
+      "languageId": 3,
+      "qualityId": 3
+    },
+    {
+      "id": 5,
+      "title": "Black Panther",
+      "description": "Black Panther description",
+      "imageUrl": "../assets/Images/5.jpg",
+      "isPopular": true,
+      "genreId": 5,
+      "imdbscoreId": 5,
+      "publishId": 5,
+      "languageId": 5,
+      "qualityId": 5
+    },
+    {
+      "id": 6,
+      "title": "Ferdinant",
+      "description": "Ferdinant description",
+      "imageUrl": "../assets/Images/6.jpg",
+      "isPopular": false,
+      "genreId": 1,
+      "imdbscoreId": 1,
+      "publishId": 1,
+      "languageId": 1,
+      "qualityId": 1
+    },
+    {
+      "id": 7,
+      "title": "Isle of Dogs",
+      "description": "Isle of Dogs description",
+      "imageUrl": "../assets/Images/7.jpg",
+      "isPopular": true,
+      "genreId": 1,
+      "imdbscoreId": 1,
+      "publishId": 1,
+      "languageId": 1,
+      "qualityId": 1
+    },
+    {
+      "id": 8,
+      "title": "Alexander",
+      "description": "Alexander description",
+      "imageUrl": "../assets/Images/8.jpg",
+      "isPopular": false,
+      "genreId": 1,
+      "imdbscoreId": 1,
+      "publishId": 1,
+      "languageId": 1,
+      "qualityId": 1
+    }
+  ],
+  "genres": [
+    {
+      "id": 1,
+      "genrename": "adventsure"
+    },
+    {
+      "id": 2,
+      "genrename": "romantic"
+    },
+    {
+      "id": 3,
+      "genrename": "comedy"
+    },
+    {
+      "id": 4,
+      "genrename": "sci-fi"
+    },
+    {
+      "id": 5,
+      "genrename": "dram"
+    }
+  ],
+  "imdbscores": [
+    {
+      "id": 1,
+      "imdbscore": "9"
+    },
+    {
+      "id": 2,
+      "imdbscore": "8"
+    },
+    {
+      "id": 3,
+      "imdbscore": "7"
+    },
+    {
+      "id": 4,
+      "imdbscore": "6"
+    },
+    {
+      "id": 5,
+      "imdbscore": "5"
+    }
+  ],
+  "publishes": [
+    {
+      "id": 1,
+      "publishyear": "2022"
+    },
+    {
+      "id": 2,
+      "publishyear": "2021"
+    },
+    {
+      "id": 3,
+      "publishyear": "2020"
+    },
+    {
+      "id": 4,
+      "publishyear": "2019"
+    },
+    {
+      "id": 5,
+      "publishyear": "2018"
+    },
+    {
+      "id": 6,
+      "publishyear": "2017"
+    },
+    {
+      "id": 7,
+      "publishyear": "2016"
+    },
+    {
+      "id": 8,
+      "publishyear": "2015"
+    },
+    {
+      "id": 9,
+      "publishyear": "2014"
+    },
+    {
+      "id": 10,
+      "publishyear": "2013"
+    },
+    {
+      "id": 11,
+      "publishyear": "2012"
+    },
+    {
+      "id": 12,
+      "publishyear": "2011"
+    },
+    {
+      "id": 13,
+      "publishyear": "2010"
+    },
+    {
+      "id": 14,
+      "publishyear": "2009"
+    },
+    {
+      "id": 15,
+      "publishyear": "2008"
+    },
+    {
+      "id": 16,
+      "publishyear": "2007"
+    },
+    {
+      "id": 17,
+      "publishyear": "2006"
+    },
+    {
+      "id": 18,
+      "publishyear": "2005"
+    },
+    {
+      "id": 19,
+      "publishyear": "2004"
+    },
+    {
+      "id": 20,
+      "publishyear": "2003"
+    }
+  ],
+  "languages": [
+    {
+      "id": 1,
+      "language": "English"
+    },
+    {
+      "id": 2,
+      "language": "French"
+    },
+    {
+      "id": 3,
+      "language": "German"
+    },
+    {
+      "id": 4,
+      "language": "Italian"
+    },
+    {
+      "id": 5,
+      "language": "Spanish"
+    },
+    {
+      "id": 6,
+      "language": "Portuguese"
+    },
+    {
+      "id": 7,
+      "language": "Japanese"
+    },
+    {
+      "id": 8,
+      "language": "Korean"
+    },
+    {
+      "id": 9,
+      "language": "Indian"
+    },
+    {
+      "id": 10,
+      "language": "Turkish"
+    }
+  ],
+  "qualities": [
+    {
+      "id": 1,
+      "videoquality": "SD (Standard Definition)"
+    },
+    {
+      "id": 2,
+      "videoquality": "HD (High Definition)"
+    },
+    {
+      "id": 3,
+      "videoquality": "Full HD (FHD)"
+    },
+    {
+      "id": 4,
+      "videoquality": "QHD (Quad HD)"
+    },
+    {
+      "id": 5,
+      "videoquality": "2K video"
+    },
+    {
+      "id": 6,
+      "videoquality": "4K video (Ultra HD)"
+    },
+    {
+      "id": 7,
+      "videoquality": "8K video (Full Ultra HD)"
+    },
+    {
+      "id": 8,
+      "videoquality": "3D"
+    }
+  ]
+}

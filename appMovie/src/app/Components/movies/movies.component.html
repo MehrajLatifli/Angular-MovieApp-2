@@ -1,0 +1,301 @@
+<app-movie></app-movie>
+
+
+
+<div class="container my-9">
+  <div class="row">
+    <div class="col-md-9">
+
+      <br>
+
+
+
+      <div *ngIf="movies.length>0; else no_movies">
+
+
+
+        <ng-template [ngTemplateOutlet]="movieList2" [ngTemplateOutletContext]="{ movies: popularMovies }">
+        </ng-template>
+
+
+
+
+        <br>
+        <br>
+        <br>
+        <br>
+
+
+        <div class="alert alert-success">{{movies.length}} movies found</div>
+
+        <div class="mb-3">
+
+          <input type="text" placeholder="Search...." [(ngModel)]="filterText" class="form-control">
+
+          <small class="text-muted"> You seached {{filterText | lowercase}}</small>
+
+        </div>
+
+
+
+
+        <ng-template [ngTemplateOutlet]="movies_list1"></ng-template>
+
+
+
+
+
+
+      </div>
+
+
+
+
+
+
+      <ng-template #no_movies>
+
+        <div class="alert alert-warning">
+
+          No movies found
+        </div>
+        <div class="alert alert-warning" *ngIf="movieError">
+
+
+          <div *ngIf="movieError">
+
+            {{movieError.message}}
+
+          </div>
+
+        </div>
+
+      </ng-template>
+
+      <ng-template #movies_list1>
+
+        <div class="card mb-3" *ngFor="let item of movies | movieFilter: filterText">
+          <div class="row">
+            <div class="col-md-3">
+              <img src="{{item.imageUrl}}" class="img-fluid rounded-start">
+            </div>
+
+            <div class="col-md-9  d-flex flex-column text-left ng-star-inserted">
+              <div class="card-body d-flex flex-column">
+                <h2 class="card-title">
+                  {{item.title}}
+                </h2>
+                <div *ngIf="item.id%2==0">
+                  <h2>
+                    &#10036;
+                    &#10036;
+                    &#10036;
+                    &#10036;
+                    &#10036;
+
+                  </h2>
+                </div>
+
+                <div *ngIf="item.id%2!=0">
+                  <h2>
+                    &#10036;
+                    &#10036;
+                    &#10036;
+
+
+                  </h2>
+                </div>
+
+                <p class="card-text">
+                  {{item.description}}
+                </p>
+                <p class="card-text">
+                  {{item.datePublished | date: 'short'}}
+                </p>
+
+                <form >
+
+
+                  <div class="form-group">
+                    <input #genreId="ngModel" min="1" max="5" type="number" required class="form-control item" name="genreId"
+                      id="genreId" placeholder="genreId" ngModel>
+
+                    <div class="alert alert-danger" *ngIf="genreId.touched && genreId.invalid">
+
+                      <div *ngIf="genreId?.errors?.['required']">
+                        genreId is required
+                      </div>
+
+                      <div *ngIf="genreId?.errors?.['min']">
+                        genreId must be <= 5  </div>
+
+                      </div>
+
+
+                      <br>
+
+
+                  </div>
+
+
+                  <div class="form-group">
+                    <input #imdbscoreId="ngModel" min="1" max="5" type="number" required class="form-control item" name="imdbscoreId"
+                      id="imdbscoreId" placeholder="imdbscoreId" ngModel>
+
+                    <div class="alert alert-danger" *ngIf="imdbscoreId.touched && imdbscoreId.invalid">
+
+                      <div *ngIf="imdbscoreId?.errors?.['required']">
+                        imdbscoreId is required
+                      </div>
+
+                      <div *ngIf="imdbscoreId?.errors?.['min']">
+                        imdbscoreId must be <= 5 </div>
+
+                      </div>
+
+
+                      <br>
+
+
+                  </div>
+
+
+                  <div class="form-group">
+                    <input #publishId="ngModel" min="1" max="20" type="number" required class="form-control item" name="publishId"
+                      id="publishId" placeholder="publishId" ngModel>
+
+                    <div class="alert alert-danger" *ngIf="publishId.touched && publishId.invalid">
+
+                      <div *ngIf="publishId?.errors?.['required']">
+                        publishId is required
+                      </div>
+
+                      <div *ngIf="publishId?.errors?.['min']">
+                        publishId must be <= 20 </div>
+
+                      </div>
+
+
+                      <br>
+
+
+                  </div>
+
+
+                  <div class="form-group">
+                    <input #languageId="ngModel" min="1" max="10" type="number" required class="form-control item" name="languageId"
+                      id="languageId" placeholder="languageId" ngModel>
+
+                    <div class="alert alert-danger" *ngIf="languageId.touched && languageId.invalid">
+
+                      <div *ngIf="languageId?.errors?.['required']">
+                        languageId is required
+                      </div>
+
+                      <div *ngIf="languageId?.errors?.['min']">
+                        languageId must be <= 10 </div>
+
+                      </div>
+
+
+                      <br>
+
+
+                  </div>
+
+
+                  <div class="form-group">
+                    <input #qualityId="ngModel" min="1" max="8" type="number" required class="form-control item" name="qualityId"
+                      id="qualityId" placeholder="qualityId" ngModel>
+
+                    <div class="alert alert-danger" *ngIf="qualityId.touched && qualityId.invalid">
+
+                      <div *ngIf="qualityId?.errors?.['required']">
+                        qualityId is required
+                      </div>
+
+                      <div *ngIf="qualityId?.errors?.['min']">
+                        qualityId must be <= 8 </div>
+
+                      </div>
+
+
+                      <br>
+
+
+                  </div>
+
+
+                  <div class="form-group">
+                    <button id="updatebtn" type="button" class="btn btn-warning create-account"
+                      (click)="Updateitem(item,genreId.value,imdbscoreId.value,publishId.value,languageId.value,qualityId.value)">Update
+                      Movies</button>
+
+                      <br>
+                      <br>
+
+                      <button id="deletebtn" type="button" class="btn btn-danger create-account"
+                      (click)="DeleteItem(item,genreId.value,imdbscoreId.value,publishId.value,languageId.value,qualityId.value)">Delete
+                      Movies</button>
+                  </div>
+
+                </form>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </ng-template>
+
+
+
+      <ng-template #movies_list1_2>
+
+        <div class="card mb-3" *ngFor="let item of movies | movieFilter: filterText">
+          <div class="row">
+            <div class="col-md-3">
+              <img src="{{item.imageUrl}}" class="img-fluid rounded-start">
+            </div>
+
+            <div class="col-md-9  d-flex flex-column text-left ng-star-inserted">
+              <div class="card-body d-flex flex-column">
+                <h2 class="card-title">
+                  {{item.title}}
+                </h2>
+                <p class="card-text">
+                  {{item.description}}
+                </p>
+                <p class="card-text">
+                  {{item.datePublished | date: 'short'}}
+                </p>
+                <button class="mt-auto btn btn-outline-primary btn-block"> Details</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </ng-template>
+
+
+      <ng-template #movieList2 let-mymovies="movies">
+        <div class="row row-cols-1 row-cols-md-3 g-4 mb-3">
+          <div *ngFor="let item of mymovies" class="col">
+            <div class="card h-100" style="border-radius: 50%; width: 100px; height: 100px; border: 0px;">
+              <img src="{{ item.imageUrl }}" alt="" class="card-img-top"
+                style="border-radius: 50%; width: 100px; height: 100px;" />
+              <div class="card-body" style="border-radius: 50%; width: 100px; height: 100px;">
+                <h5 class="card-title">{{ item.title | uppercase }}</h5>
+                <p class="card-text">{{ item.description }}</p>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </ng-template>
+
+    </div>
+
+
+  </div>
+</div>

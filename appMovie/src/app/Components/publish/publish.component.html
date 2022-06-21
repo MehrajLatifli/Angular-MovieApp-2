@@ -1,0 +1,7 @@
+<div class="list-group">
+
+  <a  [routerLink]="['/movies']" routerLinkActive="router-link-active" href="#" class="list-group-item list-group-item-action"  [class.active]="displayAll" (click)="select()">All Publish years</a>
+
+  <a [routerLink]="['/movies/publish',item.id]"  class="list-group-item list-group-item-action active" [class.active]="!displayAll && selectedpublish.id==item.id" *ngFor="let item of publishes" (click)="select(item)"> {{item.publishyear}} </a>
+
+</div>

@@ -1,0 +1,7 @@
+<div class="list-group">
+
+  <a  [routerLink]="['/movies']" routerLinkActive="router-link-active" href="#" class="list-group-item list-group-item-action"  [class.active]="displayAll" (click)="select()">All IMDBscores</a>
+
+  <a [routerLink]="['/movies/imdbscore',item.id]"  class="list-group-item list-group-item-action active" [class.active]="!displayAll && selectedgenre.id==item.id" *ngFor="let item of imdbscores" (click)="select(item)"> {{item.imdbscore}} </a>
+
+</div>

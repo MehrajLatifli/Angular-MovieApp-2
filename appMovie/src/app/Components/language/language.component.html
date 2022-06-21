@@ -1,0 +1,7 @@
+<div class="list-group">
+
+  <a  [routerLink]="['/movies']" routerLinkActive="router-link-active" href="#" class="list-group-item list-group-item-action"  [class.active]="displayAll" (click)="select()">All Languages</a>
+
+  <a [routerLink]="['/movies/language',item.id]"  class="list-group-item list-group-item-action active" [class.active]="!displayAll && selected.id==item.id" *ngFor="let item of languages" (click)="select(item)"> {{item.language}} </a>
+
+</div>
