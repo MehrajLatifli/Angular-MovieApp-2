@@ -1,18 +1,6 @@
 {
   "movies": [
     {
-      "id": 1,
-      "title": "High Life",
-      "description": "High Life description",
-      "imageUrl": "../assets/Images/1.png",
-      "isPopular": false,
-      "genreId": 3,
-      "imdbscoreId": 3,
-      "publishId": 3,
-      "languageId": 3,
-      "qualityId": 3
-    },
-    {
       "id": 2,
       "title": "billboard",
       "description": "billboard description",
@@ -66,22 +54,10 @@
       "description": "Ferdinant description",
       "imageUrl": "../assets/Images/6.jpg",
       "isPopular": false,
-      "genreId": 1,
-      "imdbscoreId": 1,
-      "publishId": 1,
-      "languageId": 1,
-      "qualityId": 1
-    },
-    {
-      "id": 7,
-      "title": "Isle of Dogs",
-      "description": "Isle of Dogs description",
-      "imageUrl": "../assets/Images/7.jpg",
-      "isPopular": true,
-      "genreId": 1,
-      "imdbscoreId": 1,
-      "publishId": 1,
-      "languageId": 1,
+      "genreId": 2,
+      "imdbscoreId": 2,
+      "publishId": 2,
+      "languageId": 3,
       "qualityId": 1
     },
     {
